@@ -1,0 +1,14 @@
+ javascript
+
+Two Sum
+-> find two diff index such that there values add up to the target value 
+ 
+> arr.length can give length > arr.sort() will not work arr.sort((a,b)=>a-b) will sort array
+> arr.map().sort() can do more then one operation > arr is reserved word don't use as variable
+⦁	arr.map((value,index)=>({value,index})) to preseve index of original array 
+⦁	then in sort (a,b) => a.value -a.value you have to do 
+
+logic
+if sum > target => right pointer move right--
+if sum <  target => left pointer move left++
+if sum === target return index of orignal array not sorted array
