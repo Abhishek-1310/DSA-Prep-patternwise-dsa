@@ -26,3 +26,19 @@ function twoSum(num, tar) {
     }
 }
 
+// sort and easy way using map
+const arr = [1, 5, 3, 7, 2]
+
+function twoSum(arr, target) {
+    const map = new Map();
+
+    for (let i = 0; i < arr.length; i++) {
+        const need = target - arr[i];
+        if (map.has(need)) {
+            return [map.get(need), i]
+        }
+        map.set(arr[i], i);
+    }
+    return []
+}
+console.log(twoSum(arr, 7))

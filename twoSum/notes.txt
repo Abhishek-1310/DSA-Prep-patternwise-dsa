@@ -12,3 +12,17 @@ logic
 if sum > target => right pointer move right--
 if sum <  target => left pointer move left++
 if sum === target return index of orignal array not sorted array
+
+why we shift right pointer when sum is greater :- arr is in ascending order if sum is > target we need lower value
+so we shift right pointer to left side to reduce value same as if sum is < target we need higher value so shift left 
+pointer to right side for increase the value 
+
+if sum is equal to target shift both left and right pointer so we can't use same value twice and going further to capture 
+other sum.
+
+using map
+iterate through array if target is 7 and 1st element 3 so 7-3 = 4 if 4 is present in map then return index or else add
+that value in map
+
+use map instead of two pointer is when you have to return index
+

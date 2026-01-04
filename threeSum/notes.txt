@@ -1,0 +1,9 @@
+threesum
+return all sum such that sum of all three value is zero and no duplicate and i!=j j!=k and i!=k
+
+-> fix one index i (use for loop for this) and remaining array use two pointer then other two index left=i+1 and right=arr.length-1; [i,two pointer] = 3 index
+
+-> edge case 1st remove duplicate in i index, from 2nd index (i>0) and if our previous value is same we can skip that i index move using continue if(i>0 && arr[i]===arr[i-1]) continue 
+-> edge case 2nd remove duplicate in left and right index, so after push the value in result check if left<right and left index value is same with next value and skip and move left++ and in right index value is same with move right also right--
+while(left<right && nums[left]===nums[left+1])left++;
+while(left<right && nums[right]===nums[right-1])right--;
