@@ -1,0 +1,12 @@
+3sum closest :- find sums which is closest to target 
+follow same three sum method and additional find diff and assign it to closest variable if diff is  closest to target
+
+->sum should be inside while loop so everytime left and right pointer update.
+how to find absolute value in javascript ( Math.abs()) 
+-> make sure difference should be in absolute value so if sum is greater than target it will give +ve val
+-> closest first value should not 0 it should sum of 1st to 3rd element (arr[0]+arr[1]+arr[2])
+
+how to find closest difference
+sum is close to target or closest var is close to target ex:- sum=4 closest=2 target = 5
+Math.abs(sum-traget)<Math.abs(closest-target) then closest = sum 
+(4-5) = 1           < (2-5) 3      so sum is close to target update target to sum
