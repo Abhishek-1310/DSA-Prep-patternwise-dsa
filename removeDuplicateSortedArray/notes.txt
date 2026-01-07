@@ -1,0 +1,14 @@
+remove duplicate element from sorted array.
+While traversing the sorted array, compare each element with the previous one,
+ and whenever a new (unique) value is found, write it at nums[tag] and increment tag, otherwise skip duplicates and continue.
+
+
+we need two pointer 1st) read pointer 2nd) write pointer 
+write pointer will update when we will get unique value so update that place value and update the write pointer.
+if(arr[i] != arr[i-1]){
+    arr[writepointer] = arr[i];
+    writepointer++;
+}
+“Since the array is sorted, duplicates are adjacent.”
+“I use two pointers moving in the same direction.”
+“One pointer scans, the other writes unique elements in-place.”
