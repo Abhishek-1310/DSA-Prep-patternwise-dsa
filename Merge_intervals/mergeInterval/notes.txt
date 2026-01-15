@@ -1,0 +1,14 @@
+merge interval :- you have to sort the interval first(overlap can be missed without sort)
+don't just compare your adjacent interval and push the value in array, Merged intervals can overlap with more than one next interval
+we have to sort interval with there starting value a[0]-b[0] interval[1,3]
+
+Sort intervals
+Put first interval in result
+For every next interval:
+Compare with last interval in result
+Merge OR push
+
+last is always end value of result so we can compare with current interval so we can check it mereg or not
+
+how to merge
+last[1] = Math.max(last[1], currlt);  ( will take max of current end and last end)

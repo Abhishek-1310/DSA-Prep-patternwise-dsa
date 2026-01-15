@@ -1,0 +1,13 @@
+=>input nums = [[[1,3],[6,7]],[2,5]] interval = nums[0] insertInterval = nums[1]
+[start, end] = interval[i] start = 1 end = 3
+=> two push needed 
+-> 1) push before insertInterval when end < insertInterval[0]
+-> 2) push after insertInterval when start > insertInterval[1] 
+       how to push , first push insertInterval then make insertInterval current interval ( so insertInterval insert in result and current inerval become insertInterval)
+=> 3rd is merge > do the changes in insertInterval in 0 = min of currentInterval or insertInterval
+                                                                                                                1 = max of currentInterval or insertInterval
+-> push insertinterval at last  // what is insertInterval is max interval which is come after all interval so it will not match any condition so it inserted at last 
+
+slice 
+firstInterval = nums.slice(0,nums.length -1)
+destructring: let [start, end] = firstInterval[i]
