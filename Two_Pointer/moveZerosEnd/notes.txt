@@ -1,0 +1,9 @@
+important thing is move all non zero elements to the right with the help of write pointer read pointer will go till end but 
+write pointer will go till all non zero value move to left side so 
+
+-> with the help of write pointer after that make all value zero ====== condition ( write pointer < arr.length) )
+
+two pointer read pointer and write pointer 
+read pointer will move everytime as loop will go forward write pointer will move only element is non zero
+
+make nums[write]=nums[right] write++
