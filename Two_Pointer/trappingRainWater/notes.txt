@@ -1,0 +1,8 @@
+to find the trap rain water 
+1) important thing is left max bar and right max bar  through that lamx and rmax
+ we can find how much water can be trapped at that index
+
+ how to find water trapp in current pointer index => rightMax - arr[rp] and leftMax - arr[lp]
+ if left pointer value is less move left pointer or else move right pointer
+
+ max sure your lamx and rmax is updated everytime
