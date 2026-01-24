@@ -1,0 +1,14 @@
+how to intersection
+start = max(a1, b1)
+end   = min(a2, b2)                         start    ends
+A = [1,5] B = [2,6] where intersection [max(1,2), min(5,6)] → [2,5] if start<=end sure intersection push it 
+why max of start because it will give start of intersection and why min of end so it will give end of intersection
+
+if compare two list but solve problem in log(n) how to do use while loop an make two pointer i and j use i
+ for 1st array j for 2nd array, move i and j according and compare and push intersection
+
+ consition if i<arr.length and increase i++ when work done 
+ The interval that ends first is finished — it can’t form new intersections. so if if--> (A[i][1] < B[j][1]) i++; else j++
+
+
+

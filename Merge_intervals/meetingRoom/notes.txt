@@ -1,0 +1,7 @@
+prev represents the last interval you actually accepted
+If a new interval overlaps, you skip it → don’t change prev
+Only when you accept an interval → update prev
+
+
+For minimum meeting rooms, you cannot just compare with one previous meeting — you need to track all ongoing overlapping meetings, 
+which is why we use two sorted arrays and two pointers.

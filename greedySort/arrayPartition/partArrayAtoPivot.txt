@@ -1,0 +1,6 @@
+if element less then pivot comes left side if greater elemts comes rigth side equal comes in middle and should maintain the order
+need three pointer left mid right if don't need to preserv order
+
+if want to preserv order then need 3 array left=[], right, mid
+and push value in left when num<pivot and push or right array when num>pivot and in equal push in middle at last just do
+return [...left,...mid,...right]

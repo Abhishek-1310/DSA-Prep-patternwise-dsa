@@ -1,0 +1,47 @@
+sort array with last value of interval := Choosing to sort the interval that ends earliest leaves maximum room for
+ future non-overlapping intervals, (you have a 4 movie ticket all have different intervals what you will do sort 
+ the interval which end earlier so you can watch max movies)
+
+ Ask this ONE question:
+❓ Am I combining intervals or choosing intervals?
+>>>>If combining → sort by start
+Merge intervals
+Detect overlaps
+Create / return merged intervals
+Traverse continuously
+
+????If choosing → sort by end
+Select max non-overlapping intervals
+Remove minimum overlapping intervals
+Choose optimal intervals (greedy)
+
+how to check overlap 
+if current first element is smaller than previous last element means overlap (cur[0]<prev[1]) overlap 
+
+sort array -> store 1st interval in hand -> start loop with 2nd elemnt compare with previous one-> and do what you want to do with overlap
+
+
+return non overlap interval
+function getOverlappingIntervals(intervals) {
+    if (intervals.length === 0) return [];
+
+    // sort by end time
+    intervals.sort((a, b) => a[1] - b[1]);
+
+    const removed = [];
+    let prev = intervals[0];
+
+    for (let i = 1; i < intervals.length; i++) {
+        const curr = intervals[i];
+
+        // overlap condition
+        if (curr[0] < prev[1]) {
+            // overlap → remove the one with bigger end
+            removed.push(curr);
+        } else {
+            prev = curr;
+        }
+    }
+
+    return removed;
+}
