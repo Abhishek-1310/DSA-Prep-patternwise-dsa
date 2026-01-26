@@ -9,3 +9,7 @@ layers of balloons. An arrow can be burst all the balloons in the same layer if 
 
 find overlap if you found overlap you can burst one balloons with one arrow. if all overlap then one arrow is enough
  to burst all the balloons.
+
+important notes is end variable is vary important let end=nums[0][1] and update this end value only when it not overlap
+start loop from index 1 and check start(nums[i][0]) > end is then it is not overlaping means need more arrow so arrow++
+ and update end=nums[i][1];  
