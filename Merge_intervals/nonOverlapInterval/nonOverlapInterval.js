@@ -1,15 +1,17 @@
 var nonOverlappingIntervals = function(nums) {
-    nums.sort((a,b)=>a[1]-b[1]);
-    let count=1;
+    if (nums.length === 0) return 0;
+    nums.sort((a, b) => a[1] - b[1]);
+    let count = 1;
     let lastVal = nums[0][1];
-    for(let i=1;i<nums.length;i++){
-        currFst = nums[i][0];
-        if(currFst>=lastVal){
+
+    for (let i = 1; i < nums.length; i++) {
+        let currFst = nums[i][0];
+        if (currFst >= lastVal) {
             count++;
+            lastVal = nums[i][1];
         }
-        lastVal=nums[i][1];
     }
-    return nums.length-count;
+    return nums.length - count;
 };
 
 // var eraseOverlapIntervals = function(intervals) {

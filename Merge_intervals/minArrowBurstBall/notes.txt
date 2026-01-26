@@ -1,0 +1,11 @@
+we are given and arr points = [[10,16],[2,8],[1,6],[7,12]] which repersent xstart and xend 
+
+layers of balloons. An arrow can be burst all the balloons in the same layer if it is shot at x position  
+                            ------------------
+           ------------
+         -----------
+                      ------------
+       0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+
+find overlap if you found overlap you can burst one balloons with one arrow. if all overlap then one arrow is enough
+ to burst all the balloons.

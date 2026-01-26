@@ -1,0 +1,6 @@
+how to swap [a,b]=[b,a]
+
+Use three pointers:
+the first pointer places 0 at its correct position from the left,
+the second pointer places 2 at its correct position from the right,
+and the third pointer traverses the array, swapping elements into their correct places.
