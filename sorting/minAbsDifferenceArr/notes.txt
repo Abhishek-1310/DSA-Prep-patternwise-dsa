@@ -1,0 +1,14 @@
+While traversing the array, we calculate differences between adjacent elements and track the minimum difference.
+Since we don’t know the minimum in advance, we compare each difference with the current min.
+If a smaller difference is found, previous pairs become invalid, so we reset the result array with the new pair.
+If the difference equals the current minimum, we add the pair to the result.
+This prevents keeping pairs with larger differences that would otherwise produce incorrect output.
+
+: so the solution is find diff and comapre with min if min > diff then update the min and reset the array with current min diff
+how to reset the array when you will get min diff
+if (diff < min) {
+    min = nums[i] - nums[i - 1];
+    result = [[nums[i - 1], nums[i]]] // this is how we reset
+} else if (diff === min) {
+    result.push([nums[i - 1], nums[i]]);
+}

@@ -1,0 +1,9 @@
+if you want to find out the max of three number three are two possible way if you sort them then
+>Product of three largest numbers [1,2,3,4] 2*3*4=24
+>Product of two smallest (most negative) numbers and the largest numbers
+   nums = [-10, -10, 5, 2]  5 * 2 * (-10) = -100 ❌    (-10) * (-10) * 5 = 500 ✅
+
+result should be always max of (opt1,opt2);
+
+
+ 
