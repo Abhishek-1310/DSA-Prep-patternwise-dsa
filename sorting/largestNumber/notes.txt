@@ -1,0 +1,19 @@
+Largest Number
+
+Given a list of non-negative integers nums, arrange them such that they form the largest number and return it.
+Since the result may be very large, so you need to return a string instead of an integer.
+
+Input: [10,2] Output:"210"
+
+Explanation: By arranging 2 before 10, the largest number formed is 210.
+
+this code can sort 
+arr.sort((a,b)=>{
+    let c=a+b;
+    let d=b+a;
+    if(c===d) return 0;
+    return c<d?1:-1;
+})
+
+with this
+numsStr.sort((a, b) => (b + a).localeCompare(a + b));

@@ -1,3 +1,12 @@
+Longest Mountain In Array
+You may recall that an array arr is a mountain array if and only if:
+arr.length >= 3
+There exists some i with 0 arr[i + 1] > ... > arr[arr.length - 1]
+Given an integer array arr, return the length of the longest subarray, which is a mountain. Return 0 if there is no mountain subarray.
+
+Input: arr = [2,1,4,7,3,2,5] Output: 5
+Explanation: The longest mountain is [1,4,7,3,2] which has length 5.
+
 Find the peak of the mountain where the element is greater than both neighbors.
 Expand left while values are decreasing from pick and expand right while values are  decreasing from pick stop 
 when it stop decresing and count length.

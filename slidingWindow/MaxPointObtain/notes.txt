@@ -1,0 +1,32 @@
+Maximum Points You Can Obtain From Cards
+There are several cards arranged in a row, and each card has an associated number of points.
+In one step, you can take one card from the beginning or from the end of the row.You have to take exactly k cards.
+Your score is the sum of the points of the cards you have taken.
+Given the integer array cardsPoints and the integer k, return the maximum score you can obtain.
+
+cardsPoints = [1, 2, 3, 4, 5, 6, 1], k = 3
+o / p: - 12 [5 + 6 + 1]  
+
+you can pick Element from middle you have to pick from start or end only so to unlock the max elemnts from left
+you have to pick before that elemnts so that max value come to start or end and then you can pick that max value 
+
+I can pick from left and right in any order.
+Whatever I pick, the unpicked cards always form one contiguous middle subarray.
+To maximize score, I should leave the subarray with the minimum possible sum.
+
+how to extract value from object 
+let { cardsPoints, k } = nums;
+
+how to use reduce to find out sum of all element of arr
+const total = cardsPoints.reduce((a, b) => a + b, 0);
+
+-> find totalSum -> and find the minSum if we subtract with total we will get maxSum
+how to find minSum -> make a window sum all element till window size then one by one remove prvious elemnts
+ and check math.min(minSum, windowSum) and update minSum -> then add next one do till end one the array
+
+ Taking k cards from the ends means leaving n − k cards as one continuous subarray in the middle.
+To maximize the picked sum, minimize the sum of the middle subarray of size n − k.
+Use a sliding window to find the minimum sum subarray of length n − k.
+The final answer is:
+total sum of array − minimum middle window sum.
+

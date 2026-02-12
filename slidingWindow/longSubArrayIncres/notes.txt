@@ -1,0 +1,14 @@
+Longest Continuous Increasing Subsequence
+Given an unsorted array of integers nums, return the length of the longest continuous increasing subsequence (i.e. subarray).
+The subsequence must be strictly increasing.
+
+ex:- nums = [1,3,5,4,7] output :- 3 (1,3,5)
+
+notes:-
+there is only 2 condition next element is > current element and < current elemnt 
+1) 
+take two maxcount and currentcount increse currentcount when next element is in increseing order and
+ find max of both count Math.max(maxcount, currentcount)
+2)
+ if next element is not increasing then make currentcount =1;
+

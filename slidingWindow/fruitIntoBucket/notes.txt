@@ -1,0 +1,27 @@
+Fruits Into Baskets
+You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.
+
+You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:
+You only have two baskets, and each basket can only hold a single type of fruit.
+Starting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) moving to the right until you cannot pick more fruits.
+The picked fruits must fit in your baskets. That is, you can only have at most two different types of fruits.
+Return the maximum number of fruits you can pick.
+
+
+Input:[1,2,1] Output:3
+Explanation: We can pick from all trees since there are only two types of fruits.
+
+//Whenever you see:   "At most K distinct elements" Sliding Window+HashMap / Frequency Map+Shrink window when distinct > K
+choose two distinct fruit and that fruite which will repeate again so if you will choose 1 it will not reapet later and count will be one only
+Input:[1,2,3,2,2]  Output:4 explain:- we should choose 2 which will reapaet and count is 3 and 3 count 1 
+total count 4 is max count of distinct fruit
+
+how to use map
+let map = new Map();   how to get value map.get(key) & map.set(key, value) & map.size & map.delete(key)
+
+how to increse count of elments in map
+ map.set(nums[r], (map.get(nums[r]) || 0) + 1);
+
+-> make a window and increse using right pointer using for loop,  untill distinct fruit is more than 2 if
+ distinct fruit is more than 2 then decrease(srink) it using while loop and increase left pointer ++  and remove single count fruit
+

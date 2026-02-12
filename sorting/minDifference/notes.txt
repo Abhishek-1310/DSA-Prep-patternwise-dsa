@@ -1,0 +1,11 @@
+Minimum Difference
+Given an array nums of size n, return the minimum difference between the values of any two different elements in the array.
+Input: nums = [4, 2, 1, 3]
+Output: 1
+Explanation:
+The minimum difference is 1, which can be achieved by pairs (2,1), (3,2), or (4,3).
+
+Sort the array first, because the smallest difference can only exist between adjacent elements in sorted order.
+After sorting, no non-adjacent pair can produce a smaller difference than neighbors.
+Traverse the array once and compare each element with its previous one.
+Track the minimum difference using a running variable.

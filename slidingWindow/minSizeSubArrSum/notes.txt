@@ -1,0 +1,24 @@
+Minimum Size Subarray Sum
+q) Given an array of positive integers nums and a positive integer target, return the minimal length of a contiguous subarray 
+[numsl, numsl+1, ..., numsr-1, numsr] of which the sum is greater than or equal to target. If there is no such subarray,
+ return 0 instead.
+
+ ex:- target = 7, nums = [2,3,1,2,4,3]  output :- 2 why (The subarray [4,3] has the minimal length under the problem constraint.)
+
+
+ notes:- 
+ When do I expand the window?
+
+➡️ When sum < target
+➡️ Move right pointer, add numbers ( this will be in for loop pointer is right pointer)
+
+2️⃣ When do I shrink the window?
+
+➡️ When sum >= target (make one pointer which will indicate left pointer) use while loop until sum become >= target 
+➡️ Update answer
+➡️ Move left pointer, subtract numbers
+
+3️⃣ What am I minimizing?
+
+➡️ window length = right - left + 1  (if you are using for loop right  pointer  is i of for loop you can't access outside for loop so)
+inside for loop do minLength = Math.min(minLength, rp-lp+1) do to get min length;

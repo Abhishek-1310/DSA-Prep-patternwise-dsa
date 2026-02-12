@@ -1,0 +1,21 @@
+Merge Sorted Array
+
+You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing
+the number of elements in nums1 and nums2 respectively. Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, 
+nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3  Output: [1,2,2,3,5,6]
+Explanation: After merging, nums1 becomes [1,2,2,3,5,6].
+
+we started the index from end because that end prevents overwriting elements in nums1 that haven’t been compared yet.
+nums1=[2,3,4,0,0,0] nums2=[1,5,6]
+           l     t             r
+
+why this r>=0 in while loop
+If nums2 is fully merged, we’re done Remaining elements in nums1 are already in correct order No need to copy them again  
+
+if nums1[l] is larger:- Place the larger element at the t place of nums1 and  Move both pointers backward l and t
+if nums2[r] is larger :- copy the elemnts from nums2[r] and past in current position of nums1[t] and move both pointer r and t
+
+“Start from the back, compare the largest elements, and fill nums1 from right to left.”

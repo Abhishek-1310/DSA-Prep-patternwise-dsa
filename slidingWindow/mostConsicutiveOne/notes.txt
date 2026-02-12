@@ -1,0 +1,17 @@
+Max Consecutive Ones
+Given a binary array nums, return the maximum number of consecutive 1's in the array.
+
+Example 1:
+
+Input: nums = [1,1,0,1,1,1] Output:3
+
+how to solve
+
+Start scanning the array from left to right. Keep a counter to track the current streak.
+ If the condition is satisfied, increase the counter. If the condition breaks, reset the counter to zero. Keep updating the maximum value seen so far.
+
+ when to use this approch
+ Use this approach when the problem asks for:
+
+The maximum number of consecutive elements The longest continuous streak The length of a contiguous segment
+Something that must be counted without interruption If the word “consecutive”, “continuous”, or “streak” appears, this pattern is very likely needed.

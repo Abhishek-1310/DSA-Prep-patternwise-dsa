@@ -1,3 +1,10 @@
+Non Overlapping Intervals
+Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
+
+Input: intervals = [[1,2],[2,3],[3,4],[1,3]] Output:1
+Explanation: Removing [1,3] leaves the rest of the intervals non-overlapping.
+
+
 sort array with last value of interval := Choosing to sort the interval that ends earliest leaves maximum room for
  future non-overlapping intervals, (you have a 4 movie ticket all have different intervals what you will do sort 
  the interval which end earlier so you can watch max movies)
