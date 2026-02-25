@@ -7,7 +7,8 @@ Given an integer array arr, return the length of the longest subarray, which is 
 Input: arr = [2,1,4,7,3,2,5] Output: 5
 Explanation: The longest mountain is [1,4,7,3,2] which has length 5.
 
-Find the peak of the mountain where the element is greater than both neighbors.
+Find the peak of the mountain where the element is greater than both neighbors.(start for loop find peak)
+after finding peak then start left and right, left is before peak and right is after peak and with help of while loop find mountains end and find max mountain 
 Expand left while values are decreasing from pick and expand right while values are  decreasing from pick stop 
 when it stop decresing and count length.
 Count the total length of this range to get the mountain length.
