@@ -12,5 +12,5 @@ how to find min and max in subarray
     let subMax = Math.max(...arr.slice(left, right + 1));
 
 first find the left first unsorted element then find right first unsorted element
-then min min and max 
+then find min and max in the subarray between first left unsorted and first right unsorted
 then according to that min and max expand left and right pointer to find whole unsorted subarray 
