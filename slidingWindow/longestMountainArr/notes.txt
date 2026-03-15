@@ -1,0 +1,18 @@
+Longest Mountain In Array
+Medium
+Acceptance: 38.7%
+Let's call any (contiguous) subarray B (of A) a mountain if the following properties hold:
+
+B.length >= 3
+There exists some 0 B[i + 1] > ... > B[B.length - 1]
+Given an array A of integers, return the length of the longest mountain. Return 0 if there is no mountain.
+Input: [2,1,4,7,3,2,5]
+Output:5
+Explanation:The longest mountain is [1,4,7,3,2] which has length 5.
+
+notes:- (peak elements) which is greater than both side elements so maybe it can become mountain so after find peak elements
+then keep two pointer left and right and expand that pointer to check length of the mountain expand left with left-- and right with right++ 
+both pointer will expand untill find the base of mountain
+
+how to expan with while ( lp>0 && nums[lp]>nums[lp-1]) -> lp-- then (rp<len-1 && nums[rp]>nums[rp+1]) => rp++
+length of mountain is (rp-lp+1)

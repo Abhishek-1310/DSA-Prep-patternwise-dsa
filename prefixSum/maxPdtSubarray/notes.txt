@@ -1,0 +1,14 @@
+Maximum Product Subarray
+Given an integer array nums, find a contiguous non-empty subarray within the array that has the largest product,
+ and return the product. The test cases are generated so that the answer will fit in a 32-bit integer.
+
+Input: nums = [2,3,-2,4]
+Output:6
+Explanation: The subarray [2,3] has the largest product 6.
+
+notes :- 
+
+if you find -ve number replace max with min because when we multiply with -ve number min will become max like see
+max = 6 min = 2 if it will multiply with -ve min become max so before multiply swap [max,min] = [min,max];
+and we need to find Math.max to tract of max pdt and find Math.min because we need time of swap this.
+then find max and min and update in result .

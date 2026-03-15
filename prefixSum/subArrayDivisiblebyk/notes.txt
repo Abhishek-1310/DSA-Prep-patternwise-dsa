@@ -1,0 +1,12 @@
+Subarrays Sums Divisible By K
+Given an integer array nums and an integer k, return the number of non-empty subarrays that have a sum divisible by k.
+A subarray is a contiguous part of an array.
+Input: nums = [4,5,0,-2,-3,1], k = 5
+Output: 7 sub arr which is divisible by 5
+
+
+notes:- 
+if (prefix[j] - prefix[i]) % k = 0 then prefix[j] % k = prefix[i] % k it means if reminder of i and j are same then
+ both divisible by k example 
+ prefix = 9 9 % 5 = 4 prefix = 4 4 % 5 = 4 both rem is 4 means both is divisible by 5 so store rem in hashmap and check
+  if rem is present in or not if yes then increase count

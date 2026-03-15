@@ -1,0 +1,12 @@
+Contiguous Array
+Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
+Input:[0,1]
+Output:2
+Explanation: The entire array contains equal number of 0 and 1.
+
+notes
+count(1) = count(0) => count(1) - count(0) = 0 so make 0=> -1 and 1 => 1 so 1-1=0
+set.map(0,-1) because we assume 0 as -1
+length = currentIndex - firstIndex
+count sum for 0 and 1 and check if map has sum then find distance between them with i-last same element(i-map.get(sum))
+else add that sum in map with index we need index too find length
