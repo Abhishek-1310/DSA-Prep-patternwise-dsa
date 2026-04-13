@@ -17,3 +17,5 @@ while(left<right && nums[right]===nums[right-1])right--;
 
 how to remove duplicate value in loop
 if (i > 0 && nums[i] === nums[i - 1]) continue
+
+continue will skip  rest of the iteration and will move it to i+1 
