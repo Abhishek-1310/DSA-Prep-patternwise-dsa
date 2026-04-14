@@ -5,11 +5,10 @@ Input: nums = [-4,-1,0,3,10]
 Output: [0,1,9,16,100] Explanation: After squaring, the array becomes [16,1,0,9,100]. After sorting, it becomes [0,1,9,16,100].
 
 
-. we need three pointer here left,right and index to fill the new array from end to start because we are placing the largest squares first.
+. we need two pointer here left,right in both end and 3 pointer as index to fill the new array from end, because we are placing the largest squares at end.
 . we have to compare absolute values because negative values when squared become positive and can be larger than positive values. like -4 and 3. -4 when squared becomes 16 which is larger than 9 (3 squared).
-. we need <= because when left and right point to the same element we still need to process that element.
-. when left pointer value is greater then then left pointer value is squared and placed at the current index position in the result array and left pointer is moved to the right. vice versa in other case.
-. every time i have to decrease index to fill the next position in the result array.
+. when left pointer value is greater then then right pointer then left pointer value is squared and placed at the current index position in the result array and left pointer is moved to the right. vice versa in other case.
+. every time i have to decrease index to fill the next position in the result array index star from end.
 
 [-4, -1, 0, 3, 10]
 Expected
