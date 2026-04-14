@@ -15,6 +15,7 @@ remove duplicate element from sorted array.
 While traversing the sorted array, compare each element with the previous one,
  and whenever a new (unique) value is found, write it at nums[tag] and increment tag, otherwise skip duplicates and continue.
 
+important note:- do you know when duplicate present in array writepointer will not move only when unique value prent it will move so duplicate value removed that is why i start from 1 and check previous i-1 so if unique value is there then upadte with current value nothing will change.
 
 we need two pointer 1st) read pointer 2nd) write pointer 
 write pointer will update when we will get unique value so update that place value and update the write pointer.
