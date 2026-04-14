@@ -9,6 +9,8 @@ Explanation: After sorting, all 0s come first, then 1s, then 2s.
 how to swap [a,b]=[b,a]
 
 Use three pointers:
-the first pointer places 0 at its correct position from the left,
-the second pointer places 2 at its correct position from the right,
-and the third pointer traverses the array, swapping elements into their correct places.
+the first pointer i start from 0 index,
+the second pointer j start from last index,
+and the third pointer traverses the array start from 0.
+
+imp notes:- third pointer will swap with 1st pointer(i) when it found 0 third pointer will swap with (j) when found 2 no swap when found 1.
