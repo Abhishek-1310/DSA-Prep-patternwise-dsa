@@ -14,3 +14,14 @@ how to find min and max in subarray
 first find the left first unsorted element then find right first unsorted element
 then find min and max in the subarray between first left unsorted and first right unsorted
 then according to that min and max expand left and right pointer to find whole unsorted subarray 
+
+why we need to find max and min then expand 
+take this as example [1, 4, 10, 8, 3, 5] 
+first dip from left is at 2 (from left current should be < next but 10 is not less than 8 so this is dip)
+from right 1st dip is at 4 ( from right current should be > previous but 3 is not greater than 8 so this is dip)
+you found out left and right pointer inconsistency still if you say answer is 10,8,3 is answer no 
+then find min 4 max 10 in this inconsistency 
+take min and expand on left if you found value less than 3 then stop,  4 not less than 3 move left pointer at index 1 
+then  value 1 yes stop don't move left pointer it should be at 1
+then take max 10 and on right found value greater than 10  move right and move right pointer forward till if find greater value But it didn't find and array  length ends so last index 5 so 
+left index 1 right index 5 answer is 5-1+1=5 (4,10,8,3,5)
