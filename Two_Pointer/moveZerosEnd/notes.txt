@@ -1,9 +1,15 @@
-important thing is move all non zero elements to the right with the help of write pointer read pointer will go till end but 
-write pointer will go till all non zero value move to left side so 
-
--> with the help of write pointer after that make all value zero ====== condition ( write pointer < arr.length) )
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+Note that you must do this in-place without making a copy of the array.
+Input: nums = [0,1,0,3,12] Output: [1,3,12,0,0]
 
 two pointer read pointer and write pointer 
 read pointer will move everytime as loop will go forward write pointer will move only element is non zero
-
+bcoz it will update when valid elemnt will find. after replace with non zero elements 
 make nums[write]=nums[right] write++
+ex:-[0,4,1,2,0,5] after fast pointer reached at end write pointer is at 4 (move all non zero elements at left
+[4,1,2,5(wp),0,5] write pointer is at index 3 after wards elements is same as eailer 
+
+so remaining elements we have to replace with zero
+Condition is write pointer < arr.length => arr[write] =0;
+
+write pointer(slow) only move when valid elements found read pointer(fast) will move everytime 
